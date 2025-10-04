@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome History Exporter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>📜 Chrome History Exporter</h1>
+      <p>History has been automatically exported to <b>data.txt</b>.</p>
+      {% if count %}
+      <p>✅ {{ count }} links saved successfully.</p>
+      {% else %}
+      <p>⚠️ Chrome history not found or empty.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
